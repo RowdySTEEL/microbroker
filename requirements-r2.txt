@@ -1,0 +1,3 @@
+# Direct install supports the PYTHONPATH workflow; no editable build needed.
+websockets>=16,<17
+psycopg[binary]>=3.2,<4

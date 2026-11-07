@@ -1,0 +1,35 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python environments and build artifacts
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.coverage*
+.pytest_cache/
+.ruff_cache/
+
+# Market data, models and session output
+/data/
+/logs/
+/models/
+/reports/
+/docs/releases/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.safetensors
+*.log
+*.zip
+.DS_Store

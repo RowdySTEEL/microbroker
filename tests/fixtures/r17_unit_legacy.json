@@ -1,0 +1,271 @@
+{
+  "source": "Actual R17 source with controlled synthetic scores, not FinBERT inference",
+  "article": {
+    "data": {
+      "id": 99918,
+      "provider": "alpaca",
+      "headline": "Company update",
+      "summary": "",
+      "author": "",
+      "source": "",
+      "created_at": "2026-01-05T10:00:00.000000000Z",
+      "updated_at": "2026-01-05T10:00:00.000000000Z",
+      "url": "",
+      "symbols": [
+        "MSFT"
+      ],
+      "content_html": "Microsoft shares fell to a low last year. Analysts are increasingly optimistic about Microsoft today.",
+      "content_text": "Microsoft shares fell to a low last year. Analysts are increasingly optimistic about Microsoft today.",
+      "content_provided": true
+    },
+    "mappings": {
+      "MSFT": "provider_tag"
+    },
+    "first_seen": "2026-01-06T00:00:00Z"
+  },
+  "analyzer": {
+    "research_decision_policy": {
+      "method": "r17-conflict-and-margin-abstention-v1",
+      "min_top_label_margin": 0.15,
+      "threshold_calibrated": false
+    },
+    "policy": "r17-research-conflict-margin-abstention-v1",
+    "field_limits": {
+      "headline": 4000,
+      "summary": 6000,
+      "content_text": 16000
+    },
+    "aliases": {
+      "AAPL": [
+        "Apple",
+        "Apple Inc",
+        "iPhone",
+        "MacBook",
+        "iPad"
+      ],
+      "MSFT": [
+        "Microsoft",
+        "Azure"
+      ],
+      "NVDA": [
+        "Nvidia"
+      ],
+      "AMZN": [
+        "Amazon",
+        "Amazon.com",
+        "Amazon Web Services"
+      ],
+      "GOOGL": [
+        "Alphabet",
+        "Google"
+      ],
+      "META": [
+        "Meta Platforms",
+        "Facebook",
+        "Instagram"
+      ],
+      "TSLA": [
+        "Tesla"
+      ],
+      "AMD": [
+        "Advanced Micro Devices"
+      ],
+      "NFLX": [
+        "Netflix"
+      ],
+      "AVGO": [
+        "Broadcom"
+      ],
+      "SPY": [
+        "SPDR S&P 500"
+      ],
+      "QQQ": [
+        "Invesco QQQ"
+      ]
+    },
+    "engine": {
+      "name": "rules",
+      "version": "synthetic-r17-legacy-unit-case",
+      "trained_model": false
+    },
+    "code_sha256": {
+      "policy.py": "553156de576f872879cc01817c9f0d199f681d57f35f673548f9f0a5f53949e6",
+      "sentiment.py": "e78ce86f9d31aeb773a8412d7692d50e111e0d32465c7ae6d5a194a719e9e078",
+      "analysis.py": "2f6a92f9179561df4f47532b20f2b82dbb6dc86ba310cd36df521240720d8c85",
+      "evidence.py": "462ca87a82815a646768f85ce9d4b35b26bdbfecd8ccebbd680594d008d4f2e7",
+      "attribution.py": "04ea343a9f737cc903e71311dcef3ccc6f104453ef2e3fc587603837fc18344f",
+      "research_decision.py": "52e48ab9549fb6b8499f7482bff70627c94f117b42a448840f301ac2e99f549a"
+    },
+    "sentiment_scope": "document_and_filtered_company_context",
+    "language_assumption": "English",
+    "entity_context_policy": "mention_context_with_subject_counterparty_guard_no_pronoun_resolution",
+    "entity_sentiment_implemented": true,
+    "entity_attribution_validated": false,
+    "price_impact_implemented": false
+  },
+  "analyzer_key": "cd8223c6eab99828a4f053154a02622072b9f5945e575dd94033adad68da39e5",
+  "result": {
+    "input_sha256": "67fc7ece4bf769e8db31dd30a6e9e13596b49a93d20bd84d15c349cb308b3d4b",
+    "text_basis": "headline_body",
+    "character_truncated_fields": [],
+    "text_basis_semantics": "bounded_fields_all_tokens_covered_for_finbert",
+    "sentiment_scope": "document",
+    "sentiment": {
+      "label": "negative",
+      "score": -0.85,
+      "probabilities": {
+        "positive": 0.05,
+        "negative": 0.9,
+        "neutral": 0.05
+      },
+      "confidence": 0.9,
+      "confidence_calibrated": false,
+      "token_truncated": false
+    },
+    "relevance": {
+      "MSFT": {
+        "basis": "body_mention",
+        "rank": 2,
+        "mapping_method": "provider_tag",
+        "mentions": {
+          "headline": [],
+          "summary": [],
+          "content_text": [
+            "Microsoft"
+          ]
+        },
+        "entity_sentiment_available": true
+      }
+    },
+    "entity_sentiments": {
+      "MSFT": {
+        "status": "scored",
+        "scope": "guarded_single_company_or_explicit_money_flow_context",
+        "method": "mention_clause_filter_with_subject_counterparty_guard",
+        "attribution_validated": false,
+        "context_sha256": "8f22385b573a4b6a97316db1817f2e3b6a213ce43da8620ecc98748e884599c1",
+        "context_unit_count": 2,
+        "shared_units_excluded": 0,
+        "insufficient_units_excluded": 0,
+        "ambiguous_units_excluded": 0,
+        "excluded_context_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "raw_mention_context_sha256": "8f22385b573a4b6a97316db1817f2e3b6a213ce43da8620ecc98748e884599c1",
+        "raw_mention_sentiment": {
+          "label": "negative",
+          "score": -0.85,
+          "probabilities": {
+            "positive": 0.05,
+            "negative": 0.9,
+            "neutral": 0.05
+          },
+          "confidence": 0.9,
+          "confidence_calibrated": false,
+          "token_truncated": false
+        },
+        "raw_mention_sentiment_usable_for_alignment": false,
+        "evidence_samples": [
+          {
+            "field": "content_text",
+            "start_char": 0,
+            "end_char": 41,
+            "attribution": "single_company_mention",
+            "reported_money_flow": null,
+            "excerpt": "Microsoft shares fell to a low last year.",
+            "text_sha256": "e86eb12a361ce945f8e5de24bae78cd7c6afd8ae438cc2636c19badb70dea8c7"
+          },
+          {
+            "field": "content_text",
+            "start_char": 42,
+            "end_char": 101,
+            "attribution": "single_company_mention",
+            "reported_money_flow": null,
+            "excerpt": "Analysts are increasingly optimistic about Microsoft today.",
+            "text_sha256": "56ca8559c874d598a369718bbd30250dc49cecc60540ffb81f10c4f1b30751f3"
+          }
+        ],
+        "reported_money_flow_counts": {},
+        "evidence_summary": {
+          "status": "no_opposite_evidence_detected",
+          "method": "r8-window-labels-and-narrow-phrase-rules-v1",
+          "raw_label": "negative",
+          "window_label_counts": {},
+          "window_content_token_share": {},
+          "opposite_window_labels": false,
+          "opposite_rule_phrases": false,
+          "rule_label": "unscored",
+          "rule_evidence_samples": [],
+          "rule_negated_samples": [],
+          "rule_sample_limit": 30,
+          "absence_is_not_neutral": true,
+          "semantic_conflict_validated": false,
+          "confidence_calibrated": false,
+          "usable_for_trading": false
+        },
+        "sentiment": {
+          "label": "negative",
+          "score": -0.85,
+          "probabilities": {
+            "positive": 0.05,
+            "negative": 0.9,
+            "neutral": 0.05
+          },
+          "confidence": 0.9,
+          "confidence_calibrated": false,
+          "token_truncated": false
+        },
+        "research_decision": {
+          "status": "accepted",
+          "label": "negative",
+          "raw_label": "negative",
+          "reason_codes": [],
+          "top_label_margin": 0.85,
+          "method": "r17-conflict-and-margin-abstention-v1",
+          "min_top_label_margin": 0.15,
+          "threshold_calibrated": false,
+          "model_accuracy_validated": false,
+          "usable_for_trading": false
+        }
+      }
+    },
+    "analysis_format": "R17",
+    "evidence_summary": {
+      "status": "no_opposite_evidence_detected",
+      "method": "r8-window-labels-and-narrow-phrase-rules-v1",
+      "raw_label": "negative",
+      "window_label_counts": {},
+      "window_content_token_share": {},
+      "opposite_window_labels": false,
+      "opposite_rule_phrases": false,
+      "rule_label": "unscored",
+      "rule_evidence_samples": [],
+      "rule_negated_samples": [],
+      "rule_sample_limit": 30,
+      "absence_is_not_neutral": true,
+      "semantic_conflict_validated": false,
+      "confidence_calibrated": false,
+      "usable_for_trading": false
+    },
+    "research_decision": {
+      "status": "accepted",
+      "label": "negative",
+      "raw_label": "negative",
+      "reason_codes": [],
+      "top_label_margin": 0.85,
+      "method": "r17-conflict-and-margin-abstention-v1",
+      "min_top_label_margin": 0.15,
+      "threshold_calibrated": false,
+      "model_accuracy_validated": false,
+      "usable_for_trading": false
+    },
+    "flags": [],
+    "review_required": false,
+    "language_assumption": "English",
+    "language_verified": false,
+    "article_first_seen_at": "2026-01-06T00:00:00Z",
+    "backtest_ready": false,
+    "usable_for_trading": false,
+    "entity_sentiment_implemented": true,
+    "entity_attribution_validated": false,
+    "price_impact_implemented": false
+  }
+}

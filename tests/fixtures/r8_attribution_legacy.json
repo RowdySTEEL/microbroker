@@ -1,0 +1,251 @@
+{
+  "article": {
+    "data": {
+      "id": 99916,
+      "provider": "alpaca",
+      "headline": "External provider update",
+      "summary": "",
+      "author": "",
+      "source": "",
+      "created_at": "2026-01-05T10:00:00.000000000Z",
+      "updated_at": "2026-01-05T10:00:00.000000000Z",
+      "url": "",
+      "symbols": [
+        "MSFT"
+      ],
+      "content_html": "The company raises guidance after securing an agreement with Microsoft.",
+      "content_text": "The company raises guidance after securing an agreement with Microsoft.",
+      "content_provided": true
+    },
+    "mappings": {
+      "MSFT": "provider_tag"
+    },
+    "first_seen": "2026-01-06T00:00:00Z"
+  },
+  "result": {
+    "input_sha256": "55eee9d0509f0df5a1c121cbb36d8492499675f320f8d82a690cbf534080f3df",
+    "text_basis": "headline_body",
+    "character_truncated_fields": [],
+    "text_basis_semantics": "bounded_fields_all_tokens_covered_for_finbert",
+    "sentiment_scope": "document",
+    "sentiment": {
+      "label": "positive",
+      "score": 1.0,
+      "probabilities": null,
+      "confidence": null,
+      "confidence_calibrated": false,
+      "evidence": [
+        {
+          "polarity": "positive",
+          "phrase": "raises guidance",
+          "offset": 37
+        }
+      ],
+      "negated_evidence": [],
+      "token_truncated": false
+    },
+    "relevance": {
+      "MSFT": {
+        "basis": "body_mention",
+        "rank": 2,
+        "mapping_method": "provider_tag",
+        "mentions": {
+          "headline": [],
+          "summary": [],
+          "content_text": [
+            "Microsoft"
+          ]
+        },
+        "entity_sentiment_available": true
+      }
+    },
+    "entity_sentiments": {
+      "MSFT": {
+        "status": "scored",
+        "scope": "single_company_or_explicit_money_flow_context",
+        "method": "deterministic_mention_clause_filter_with_exact_money_flow_exception",
+        "attribution_validated": false,
+        "context_sha256": "15decb310617b94df6293a6842598392553d32a517690eb3ca5a3ceea16af774",
+        "context_unit_count": 1,
+        "shared_units_excluded": 0,
+        "insufficient_units_excluded": 0,
+        "evidence_samples": [
+          {
+            "field": "content_text",
+            "start_char": 0,
+            "end_char": 71,
+            "attribution": "single_company_mention",
+            "reported_money_flow": null,
+            "excerpt": "The company raises guidance after securing an agreement with Microsoft.",
+            "text_sha256": "15decb310617b94df6293a6842598392553d32a517690eb3ca5a3ceea16af774"
+          }
+        ],
+        "reported_money_flow_counts": {},
+        "evidence_summary": {
+          "status": "no_opposite_evidence_detected",
+          "method": "r8-window-labels-and-narrow-phrase-rules-v1",
+          "raw_label": "positive",
+          "window_label_counts": {},
+          "window_content_token_share": {},
+          "opposite_window_labels": false,
+          "opposite_rule_phrases": false,
+          "rule_label": "positive",
+          "rule_evidence_samples": [
+            {
+              "polarity": "positive",
+              "phrase": "raises guidance",
+              "offset": 12
+            }
+          ],
+          "rule_negated_samples": [],
+          "rule_sample_limit": 30,
+          "absence_is_not_neutral": true,
+          "semantic_conflict_validated": false,
+          "confidence_calibrated": false,
+          "usable_for_trading": false
+        },
+        "sentiment": {
+          "label": "positive",
+          "score": 1.0,
+          "probabilities": null,
+          "confidence": null,
+          "confidence_calibrated": false,
+          "evidence": [
+            {
+              "polarity": "positive",
+              "phrase": "raises guidance",
+              "offset": 12
+            }
+          ],
+          "negated_evidence": [],
+          "token_truncated": false
+        }
+      }
+    },
+    "analysis_format": "R8",
+    "evidence_summary": {
+      "status": "no_opposite_evidence_detected",
+      "method": "r8-window-labels-and-narrow-phrase-rules-v1",
+      "raw_label": "positive",
+      "window_label_counts": {},
+      "window_content_token_share": {},
+      "opposite_window_labels": false,
+      "opposite_rule_phrases": false,
+      "rule_label": "positive",
+      "rule_evidence_samples": [
+        {
+          "polarity": "positive",
+          "phrase": "raises guidance",
+          "offset": 37
+        }
+      ],
+      "rule_negated_samples": [],
+      "rule_sample_limit": 30,
+      "absence_is_not_neutral": true,
+      "semantic_conflict_validated": false,
+      "confidence_calibrated": false,
+      "usable_for_trading": false
+    },
+    "flags": [],
+    "review_required": false,
+    "language_assumption": "English",
+    "language_verified": false,
+    "article_first_seen_at": "2026-01-06T00:00:00Z",
+    "backtest_ready": false,
+    "usable_for_trading": false,
+    "entity_sentiment_implemented": true,
+    "entity_attribution_validated": false,
+    "price_impact_implemented": false
+  },
+  "analyzer_metadata": {
+    "policy": "r8-explicit-money-flow-and-evidence-v1",
+    "field_limits": {
+      "headline": 4000,
+      "summary": 6000,
+      "content_text": 16000
+    },
+    "aliases": {
+      "AAPL": [
+        "Apple",
+        "Apple Inc",
+        "iPhone",
+        "MacBook",
+        "iPad"
+      ],
+      "MSFT": [
+        "Microsoft",
+        "Azure"
+      ],
+      "NVDA": [
+        "Nvidia"
+      ],
+      "AMZN": [
+        "Amazon",
+        "Amazon.com",
+        "Amazon Web Services"
+      ],
+      "GOOGL": [
+        "Alphabet",
+        "Google"
+      ],
+      "META": [
+        "Meta Platforms",
+        "Facebook",
+        "Instagram"
+      ],
+      "TSLA": [
+        "Tesla"
+      ],
+      "AMD": [
+        "Advanced Micro Devices"
+      ],
+      "NFLX": [
+        "Netflix"
+      ],
+      "AVGO": [
+        "Broadcom"
+      ],
+      "SPY": [
+        "SPDR S&P 500"
+      ],
+      "QQQ": [
+        "Invesco QQQ"
+      ]
+    },
+    "engine": {
+      "name": "rules",
+      "version": "r5-rules-v1",
+      "patterns": {
+        "positive": [
+          "\\bbeat(?:s)? (?:earnings |revenue )?(?:estimates|expectations)\\b",
+          "\\b(?:raise[sd]?|raising) (?:its |full.year )?(?:guidance|outlook)\\b",
+          "\\brecord (?:revenue|profit|sales)\\b",
+          "\\bupgraded?\\b",
+          "\\b(?:profit|revenue|sales) (?:rose|grew|surged|increased)\\b"
+        ],
+        "negative": [
+          "\\bmiss(?:es|ed)? (?:earnings |revenue )?(?:estimates|expectations)\\b",
+          "\\b(?:cuts?|cutting|lowers?|lowered) (?:its |full.year )?(?:guidance|outlook)\\b",
+          "\\bdowngraded?\\b",
+          "\\b(?:bankruptcy|fraud|lawsuit|recall)\\b",
+          "\\b(?:profit|revenue|sales) (?:fell|declined|dropped|decreased)\\b"
+        ]
+      },
+      "confidence_calibrated": false,
+      "trained_model": false
+    },
+    "code_sha256": {
+      "policy.py": "27c3bd6c57c1a8efb1f2b000eeac2a8b9c8aaec182945c2ef92f2344ff1b7132",
+      "sentiment.py": "e78ce86f9d31aeb773a8412d7692d50e111e0d32465c7ae6d5a194a719e9e078",
+      "analysis.py": "369b38a312bc744bc8fcd43f7716a41033d626991790626efaa5ea8d33b8f8ca",
+      "evidence.py": "462ca87a82815a646768f85ce9d4b35b26bdbfecd8ccebbd680594d008d4f2e7"
+    },
+    "sentiment_scope": "document_and_filtered_company_context",
+    "language_assumption": "English",
+    "entity_context_policy": "single_company_or_exact_same_direction_money_flow_no_pronoun_resolution",
+    "entity_sentiment_implemented": true,
+    "entity_attribution_validated": false,
+    "price_impact_implemented": false
+  },
+  "analyzer_key": "2db78bd77437bbfab6e37277ffb0f6e4bea206121e5d6317ca49df2b5a8b60e7"
+}

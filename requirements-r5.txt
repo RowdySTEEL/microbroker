@@ -1,0 +1,4 @@
+-r requirements-r2.txt
+# CPU inference. Mac uses the default PyPI torch wheel; model weights are downloaded explicitly.
+torch>=2.6,<3
+transformers>=4.57.3,<5

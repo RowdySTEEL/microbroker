@@ -1,0 +1,289 @@
+{
+  "source": "R16 source with synthetic controlled outputs; not model inference",
+  "article": {
+    "data": {
+      "id": 99917,
+      "provider": "alpaca",
+      "headline": "Microsoft publishes an earnings report.",
+      "summary": "",
+      "author": "",
+      "source": "",
+      "created_at": "2026-01-05T10:00:00.000000000Z",
+      "updated_at": "2026-01-05T10:00:00.000000000Z",
+      "url": "",
+      "symbols": [
+        "MSFT"
+      ],
+      "content_html": "",
+      "content_text": "",
+      "content_provided": true
+    },
+    "mappings": {
+      "MSFT": "provider_tag"
+    },
+    "first_seen": "2026-01-06T00:00:00Z"
+  },
+  "analyzer": {
+    "policy": "r16-ambiguous-subject-counterparty-guard-v1",
+    "field_limits": {
+      "headline": 4000,
+      "summary": 6000,
+      "content_text": 16000
+    },
+    "aliases": {
+      "AAPL": [
+        "Apple",
+        "Apple Inc",
+        "iPhone",
+        "MacBook",
+        "iPad"
+      ],
+      "MSFT": [
+        "Microsoft",
+        "Azure"
+      ],
+      "NVDA": [
+        "Nvidia"
+      ],
+      "AMZN": [
+        "Amazon",
+        "Amazon.com",
+        "Amazon Web Services"
+      ],
+      "GOOGL": [
+        "Alphabet",
+        "Google"
+      ],
+      "META": [
+        "Meta Platforms",
+        "Facebook",
+        "Instagram"
+      ],
+      "TSLA": [
+        "Tesla"
+      ],
+      "AMD": [
+        "Advanced Micro Devices"
+      ],
+      "NFLX": [
+        "Netflix"
+      ],
+      "AVGO": [
+        "Broadcom"
+      ],
+      "SPY": [
+        "SPDR S&P 500"
+      ],
+      "QQQ": [
+        "Invesco QQQ"
+      ]
+    },
+    "engine": {
+      "name": "rules",
+      "version": "r16-legacy-controlled-output",
+      "trained_model": false
+    },
+    "code_sha256": {
+      "policy.py": "6dd390190de05e7c984bb30da27d55aa855e4c8837b7db1a7c31b71abe2a8400",
+      "sentiment.py": "e78ce86f9d31aeb773a8412d7692d50e111e0d32465c7ae6d5a194a719e9e078",
+      "analysis.py": "15d7bc1c33d73e5e1d318bad6f4ad95424de02a4b91e7974c665e8be93d4f463",
+      "evidence.py": "462ca87a82815a646768f85ce9d4b35b26bdbfecd8ccebbd680594d008d4f2e7",
+      "attribution.py": "04ea343a9f737cc903e71311dcef3ccc6f104453ef2e3fc587603837fc18344f"
+    },
+    "sentiment_scope": "document_and_filtered_company_context",
+    "language_assumption": "English",
+    "entity_context_policy": "mention_context_with_subject_counterparty_guard_no_pronoun_resolution",
+    "entity_sentiment_implemented": true,
+    "entity_attribution_validated": false,
+    "price_impact_implemented": false
+  },
+  "analyzer_key": "664d4ecb3e976cf0fd3d3085f0b1233e249389e7a0edf1c33bed7b7ec8e46d94",
+  "result": {
+    "input_sha256": "52dd30e2d6322f1898e023a49d8f8808ffdc51cfeb9a5b1afd90443cb3dc3041",
+    "text_basis": "headline",
+    "character_truncated_fields": [],
+    "text_basis_semantics": "bounded_fields_all_tokens_covered_for_finbert",
+    "sentiment_scope": "document",
+    "sentiment": {
+      "label": "positive",
+      "score": 0.026648815879796395,
+      "probabilities": {
+        "positive": 0.40723707024932754,
+        "negative": 0.38058825436953114,
+        "neutral": 0.2121746284319154
+      },
+      "confidence": null,
+      "confidence_calibrated": false,
+      "aggregation": "content_token_weighted_probability_mean",
+      "chunk_count": 2,
+      "chunks": [
+        {
+          "label": "positive",
+          "content_tokens": 510
+        },
+        {
+          "label": "negative",
+          "content_tokens": 336
+        }
+      ],
+      "mixed_chunk_polarity": true,
+      "token_truncated": false
+    },
+    "relevance": {
+      "MSFT": {
+        "basis": "headline_mention",
+        "rank": 4,
+        "mapping_method": "provider_tag",
+        "mentions": {
+          "headline": [
+            "Microsoft"
+          ],
+          "summary": [],
+          "content_text": []
+        },
+        "entity_sentiment_available": true
+      }
+    },
+    "entity_sentiments": {
+      "MSFT": {
+        "status": "scored",
+        "scope": "guarded_single_company_or_explicit_money_flow_context",
+        "method": "mention_clause_filter_with_subject_counterparty_guard",
+        "attribution_validated": false,
+        "context_sha256": "1f845652a28cc915945c88470f246721f01678407348813c9093437831bba0cd",
+        "context_unit_count": 1,
+        "shared_units_excluded": 0,
+        "insufficient_units_excluded": 0,
+        "ambiguous_units_excluded": 0,
+        "excluded_context_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "raw_mention_context_sha256": "1f845652a28cc915945c88470f246721f01678407348813c9093437831bba0cd",
+        "raw_mention_sentiment": {
+          "label": "positive",
+          "score": 0.026648815879796395,
+          "probabilities": {
+            "positive": 0.40723707024932754,
+            "negative": 0.38058825436953114,
+            "neutral": 0.2121746284319154
+          },
+          "confidence": null,
+          "confidence_calibrated": false,
+          "aggregation": "content_token_weighted_probability_mean",
+          "chunk_count": 2,
+          "chunks": [
+            {
+              "label": "positive",
+              "content_tokens": 510
+            },
+            {
+              "label": "negative",
+              "content_tokens": 336
+            }
+          ],
+          "mixed_chunk_polarity": true,
+          "token_truncated": false
+        },
+        "raw_mention_sentiment_usable_for_alignment": false,
+        "evidence_samples": [
+          {
+            "field": "headline",
+            "start_char": 0,
+            "end_char": 39,
+            "attribution": "single_company_mention",
+            "reported_money_flow": null,
+            "excerpt": "Microsoft publishes an earnings report.",
+            "text_sha256": "1f845652a28cc915945c88470f246721f01678407348813c9093437831bba0cd"
+          }
+        ],
+        "reported_money_flow_counts": {},
+        "evidence_summary": {
+          "status": "mixed_evidence",
+          "method": "r8-window-labels-and-narrow-phrase-rules-v1",
+          "raw_label": "positive",
+          "window_label_counts": {
+            "negative": 1,
+            "positive": 1
+          },
+          "window_content_token_share": {
+            "negative": 0.3971631205673759,
+            "positive": 0.6028368794326241
+          },
+          "opposite_window_labels": true,
+          "opposite_rule_phrases": false,
+          "rule_label": "unscored",
+          "rule_evidence_samples": [],
+          "rule_negated_samples": [],
+          "rule_sample_limit": 30,
+          "absence_is_not_neutral": true,
+          "semantic_conflict_validated": false,
+          "confidence_calibrated": false,
+          "usable_for_trading": false
+        },
+        "sentiment": {
+          "label": "positive",
+          "score": 0.026648815879796395,
+          "probabilities": {
+            "positive": 0.40723707024932754,
+            "negative": 0.38058825436953114,
+            "neutral": 0.2121746284319154
+          },
+          "confidence": null,
+          "confidence_calibrated": false,
+          "aggregation": "content_token_weighted_probability_mean",
+          "chunk_count": 2,
+          "chunks": [
+            {
+              "label": "positive",
+              "content_tokens": 510
+            },
+            {
+              "label": "negative",
+              "content_tokens": 336
+            }
+          ],
+          "mixed_chunk_polarity": true,
+          "token_truncated": false
+        }
+      }
+    },
+    "analysis_format": "R16",
+    "evidence_summary": {
+      "status": "mixed_evidence",
+      "method": "r8-window-labels-and-narrow-phrase-rules-v1",
+      "raw_label": "positive",
+      "window_label_counts": {
+        "negative": 1,
+        "positive": 1
+      },
+      "window_content_token_share": {
+        "negative": 0.3971631205673759,
+        "positive": 0.6028368794326241
+      },
+      "opposite_window_labels": true,
+      "opposite_rule_phrases": false,
+      "rule_label": "unscored",
+      "rule_evidence_samples": [],
+      "rule_negated_samples": [],
+      "rule_sample_limit": 30,
+      "absence_is_not_neutral": true,
+      "semantic_conflict_validated": false,
+      "confidence_calibrated": false,
+      "usable_for_trading": false
+    },
+    "flags": [
+      "ambiguous_model_output",
+      "mixed_chunk_polarity",
+      "mixed_entity_chunk_polarity",
+      "mixed_evidence_detected",
+      "no_full_body"
+    ],
+    "review_required": true,
+    "language_assumption": "English",
+    "language_verified": false,
+    "article_first_seen_at": "2026-01-06T00:00:00Z",
+    "backtest_ready": false,
+    "usable_for_trading": false,
+    "entity_sentiment_implemented": true,
+    "entity_attribution_validated": false,
+    "price_impact_implemented": false
+  }
+}

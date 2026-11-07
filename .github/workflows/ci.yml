@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package and stream dependency
+        run: python -m pip install '.[stream]'
+      - name: Run regression suite
+        run: python -m unittest discover -s tests
+      - name: Run synthetic event-study demo
+        run: |
+          microbroker verify-event-study
+          microbroker demo-event-study --output data/ci-demo
+
+  postgres:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: microbroker
+          POSTGRES_PASSWORD: microbroker_ci_only
+          POSTGRES_DB: microbroker
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U microbroker -d microbroker"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install package and PostgreSQL driver
+        run: python -m pip install '.[postgres,stream]'
+      - name: Verify against PostgreSQL 16
+        env:
+          DATABASE_URL: postgresql://microbroker:microbroker_ci_only@127.0.0.1:5432/microbroker
+        run: microbroker verify-postgres

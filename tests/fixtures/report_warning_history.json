@@ -1,0 +1,283 @@
+[
+  {
+    "label": "open_market",
+    "research": {
+      "stream": {
+        "status": "stopped",
+        "events_received": 40,
+        "bars_written": 40,
+        "bar_receipts_recorded": 40
+      },
+      "snapshot_minute_bars": 40,
+      "price_warmup": {
+        "status": "ready",
+        "ready_symbols": [
+          "AAPL",
+          "MSFT",
+          "NVDA",
+          "TSLA"
+        ],
+        "elapsed_seconds": 44.70748783300223,
+        "max_seconds": 90,
+        "criteria": "committed_receipt_per_symbol_completed_within_5_minutes"
+      },
+      "cycles": [
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:42:06.924488000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:43:13.234780000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:44:20.050254000Z",
+            "price_clock_flags": [
+              "AAPL",
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:45:26.620794000Z",
+            "price_clock_flags": [
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:46:34.243825000Z",
+            "price_clock_flags": [
+              "AAPL",
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ],
+            "price_gap_symbols": [
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ]
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:47:40.652049000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:48:47.119613000Z",
+            "price_clock_flags": [
+              "MSFT"
+            ],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:49:53.520051000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T13:50:59.691177000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": []
+          }
+        }
+      ]
+    },
+    "observation": {
+      "observed_at": "2026-01-12T13:50:59.691177000Z",
+      "price_clock_flags": [],
+      "price_gap_symbols": []
+    },
+    "timing": {
+      "format": "R28",
+      "stages": {
+        "portfolio_capture": {
+          "samples": 11,
+          "invalid_or_negative_samples": 0,
+          "median_seconds": 4.979199729859829e-05,
+          "p95_seconds": 3.244051292000222,
+          "max_seconds": 3.244051292000222,
+          "p95_method": "nearest_rank"
+        }
+      }
+    },
+    "coverage": {
+      "format": "R28",
+      "cutoff": "2026-01-12T13:51:15.688969000Z",
+      "available_analyses": 2,
+      "company_rows": 2,
+      "claimed_by_this_session": 2,
+      "previous_account_claims": 0,
+      "claims_for_prior_revision": 1,
+      "unassessed_analyses": 0,
+      "unassessed_company_rows": 0,
+      "samples": [],
+      "sample_limit": 20,
+      "reason": null,
+      "not_a_wait_decision": true,
+      "executable_opportunity_validated": false,
+      "scope": "current_revisions_first_received_in_session_time_window_not_collector_ownership"
+    },
+    "new_captures": 3
+  },
+  {
+    "label": "closed_market",
+    "research": {
+      "stream": {
+        "status": "stopped",
+        "events_received": 0,
+        "bars_written": 0,
+        "bar_receipts_recorded": null
+      },
+      "snapshot_minute_bars": 0,
+      "price_warmup": {
+        "status": "timed_out",
+        "ready_symbols": [],
+        "elapsed_seconds": 90.00510791599663,
+        "max_seconds": 90,
+        "criteria": "committed_receipt_per_symbol_completed_within_5_minutes"
+      },
+      "cycles": [
+        {
+          "paper": {
+            "observed_at": "2026-01-12T10:08:13.642497000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T10:09:27.704507000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": []
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T10:10:42.907109000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": [
+              "AAPL",
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ]
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T10:12:10.546355000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": [
+              "AAPL",
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ]
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T10:13:22.018907000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": [
+              "AAPL",
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ]
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T10:14:33.370034000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": [
+              "AAPL",
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ]
+          }
+        },
+        {
+          "paper": {
+            "observed_at": "2026-01-12T10:15:47.218373000Z",
+            "price_clock_flags": [],
+            "price_gap_symbols": [
+              "AAPL",
+              "MSFT",
+              "NVDA",
+              "TSLA"
+            ]
+          }
+        }
+      ]
+    },
+    "observation": {
+      "observed_at": "2026-01-12T10:15:47.218373000Z",
+      "price_clock_flags": [],
+      "price_gap_symbols": [
+        "AAPL",
+        "MSFT",
+        "NVDA",
+        "TSLA"
+      ]
+    },
+    "timing": {
+      "format": "R28",
+      "stages": {
+        "portfolio_capture": {
+          "samples": 9,
+          "invalid_or_negative_samples": 0,
+          "median_seconds": 7.462500070687383e-05,
+          "p95_seconds": 9.677394459002244,
+          "max_seconds": 9.677394459002244,
+          "p95_method": "nearest_rank"
+        }
+      }
+    },
+    "coverage": {
+      "format": "R28",
+      "cutoff": "2026-01-12T10:16:30.009715000Z",
+      "available_analyses": 2,
+      "company_rows": 2,
+      "claimed_by_this_session": 2,
+      "previous_account_claims": 0,
+      "claims_for_prior_revision": 0,
+      "unassessed_analyses": 0,
+      "unassessed_company_rows": 0,
+      "samples": [],
+      "sample_limit": 20,
+      "reason": null,
+      "not_a_wait_decision": true,
+      "executable_opportunity_validated": false,
+      "scope": "current_revisions_first_received_in_session_time_window_not_collector_ownership"
+    },
+    "new_captures": 3
+  }
+]
